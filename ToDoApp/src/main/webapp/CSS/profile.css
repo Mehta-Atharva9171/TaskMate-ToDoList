@@ -1,0 +1,109 @@
+
+body {
+    padding: 0px;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.full_screen_div {
+    width: 1440px;
+    height: 1024px;
+    background: #BBB5BD;
+}
+
+.logo {
+    position: relative;
+    top: 10px;
+    z-index: 1;
+    overflow: hidden;
+    width: 190px;
+    height: 110px;
+}
+
+.chotu_rect {
+    width: 548px;
+    height: 450px;
+    background: #D9D9D9;
+}
+
+.profile {
+    width: 377px;
+    height: 64px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 60px;
+    font-family: Cherry Swash;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.name {
+    width: 171px;
+    height: 43px;
+    margin-top: 20px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 40px;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.name_output {
+    width: 450px;
+    height: 40px;
+    margin-top: 15px;
+    background: #BBB5BD;
+}
+
+.email {
+    width: 257px;
+    height: 47px;
+    margin-top: 10px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 40px;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.email_output {
+    width: 450px;
+    height: 40px;
+    margin-top: 15px;
+    background: #BBB5BD;
+}
+
+.change_pass {
+    width: 351px;
+    height: 54px;
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 35px;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+    background: #BBB5BD;
+    border: #D9D9D9 thin;
+}
+
+.back {
+    width: 351px;
+    height: 54px;
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 35px;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+    background: #BBB5BD;
+    border: #D9D9D9 thin;
+}

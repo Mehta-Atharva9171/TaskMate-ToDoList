@@ -7,7 +7,7 @@
     <title>Task Mate : Main Screen</title>
 </head>
 <body>
-<div class="main_rect" style="color: red">
+<div class="main_rect">
     <div style="display: flex;">
         <div id="mrc" class="menu_rect">
             <div id="toggleButton" class="off" onclick="toggleState()">
@@ -24,18 +24,14 @@
                         <img class="icon" src="./images/pencil_icon.png" /> Edit a Task
                     </button></li>
                     <li><button class="tb"
-                                onclick="window.location.href='./profilePage.html'">
+                                onclick="window.location.href='./profile.html'">
                         <img class="icon" style="padding-top: 1px"
                              src="./images/profile.png" /> Profile
                     </button></li>
-                    <li><button class="tb"
-                                onclick="window.location.href='./index.html'">
-                        <img class="icon" src="./images/logout.png" /> Log Out
-                    </button></li>
-                    <li><button class="tb"
-                                onclick="window.location.href='./aboutUsMenu.html'">
-                        <img class="icon" src="./images/aboutUs.png" /> About Us
-                    </button></li>
+                    <li><button class="tb" onclick="window.location.href='./index.html'">
+                        <img class="icon" src="./images/logout.png" /> Log Out </button></li>
+                    <li><button class="tb" onclick="window.location.href='./aboutUsMenu.html'">
+                        <img class="icon" src="./images/aboutUs.png" /> About Us</button></li>
                 </ul>
                 <div>
                     <img class="logo" alt="Task Mate" src="./images/logo.png" />
@@ -53,7 +49,7 @@
                 <div class="div1">Description</div>
                 <input type="text" id="taskDescription" class="input_2"> <br>
                 <button onclick="addTask()" class="btn2">+ Add The Task</button>
-                <button onclick="window.location.href='./screenMain.jsp'"
+                <button onclick="window.location.href='./home.html'"
                         class="btn2">Back</button>
             </div>
         </div>
