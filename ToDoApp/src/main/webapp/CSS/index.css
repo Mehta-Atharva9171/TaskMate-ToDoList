@@ -1,0 +1,86 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+}
+
+.logo {
+    z-index: 1;
+	position: relative;
+	top: 10px;
+	overflow: hidden;
+	width: 190px;
+	height: 110px;
+}
+
+.welcome_div{
+	align-content: center;
+	width: 378px;
+	height: 400px;
+	padding-bottom: 50px;
+	background: #D9D9D9;
+	width: 478px;
+}
+
+.welcome_font {
+	width: 359px;
+	height: 88px;
+	color: #B118C8;
+	font-size: 50px;
+	font-family: Cherry Swash;
+	font-weight: 700;
+	word-wrap: break-word;
+}
+
+.login_button {
+	width: 350px;
+	height: 50px;
+	background: #BBB5BD;
+	font-family: Cherry Swash;
+	font-size: 35px;
+	font-weight: 700;
+	color: #B118C8;
+	border: thick;
+	word-wrap: break-word;
+}
+
+.signUp_button {
+	width: 350px;
+	height: 50px;
+	background: #BBB5BD;
+	font-family: Cherry Swash;
+	font-size: 35px;
+	font-weight: 700;
+	color: #B118C8;
+	border: thick;
+	word-wrap: break-word;
+}
+
+.about_us {
+	width: 125px;
+	height: 43px;
+	text-align: center;
+	color: #B118C8;
+	font-size: 20px;
+	font-family: Cherry Swash;
+	font-weight: 700;
+	word-wrap: break-word;
+	margin-top: 170px;
+	border: hidden;
+	background-color: transparent;
+}
+
+.a {
+	width: 1440px;
+	height: 1024px;
+	background: #BBB5BD;
+}
+
+.b {
+	background-color: #D9D9D9;
+	width: 50px;
+	height: 50px;
+}

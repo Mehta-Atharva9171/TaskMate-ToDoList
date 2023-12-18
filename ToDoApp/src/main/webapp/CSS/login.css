@@ -1,0 +1,87 @@
+body {
+    padding: 0px;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main {
+    width: 1440px;
+    height: 1024px;
+    background: #BBB5BD;
+}
+
+.logo {
+    position: relative;
+    top: 10px;
+    z-index: 1;
+    overflow: hidden;
+    width: 190px;
+    height: 110px;
+}
+
+.rectangle {
+    width: 448px;
+    height: 460px;
+    background: #D9D9D9;
+}
+
+.login_text {
+    width: 350px;
+    height: 64px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 2.5rem;
+    font-family: Cherry Swash;
+    font-weight: 700;
+    word-wrap: break-word;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.text_all {
+    position: relative;
+    height: 43px;
+    text-align: center;
+    color: #B118C8;
+    font-size: 25px;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+    width: 165px;
+    padding-bottom: 0px;
+}
+
+.textbox_all {
+    width: 350px;
+    height: 25px;
+    background: #BBB5BD;
+    padding: 0px;
+    margin: 0pc;
+    position: relative;
+    color: #000000;
+    border: thick;
+    outline: #BBB5BD;
+    padding-left: 5px;
+}
+
+.submit_button {
+    position: relative;
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    background: #BBB5BD;
+    font-size: 20px;
+    font-style: normal;
+    font-family: Cherry Swash;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+    align-items: center;
+    color: #B118C8;
+    border: none;
+    margin: 10px;
+}
+

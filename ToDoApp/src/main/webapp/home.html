@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Cherry Swash' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="CSS/home.css">
+    <title>Task Mate : Main Screen</title>
+</head>
+<body>
+<div class="main_rect" style="color: red">
+    <div style="display: flex;">
+        <div id="mrc" class="menu_rect">
+            <div id="toggleButton" class="off" onclick="toggleState()">
+                <img class="menu_logo" src="./images/menu_icon.png" />
+            </div>
+            <div id="menu" style="display: none;">
+                <p class="p1">Menu</p>
+                <ul>
+                    <li><button id="addTask" class="tb"
+                                onclick="toggleTaskForm()  ">+ Add a Task</button></li>
+                    <li><button class="tb" onclick="deleteTaskFromList()">-
+                        Delete a Task</button></li>
+                    <li><button class="tb" onclick="editTaskFromList()">
+                        <img class="icon" src="./images/pencil_icon.png" /> Edit a Task
+                    </button></li>
+                    <li><button class="tb"
+                                onclick="window.location.href='./profilePage.jsp'">
+                        <img class="icon" style="padding-top: 1px"
+                             src="./images/profile.png" /> Profile
+                    </button></li>
+                    <li><button class="tb"
+                                onclick="window.location.href='./index.jsp'">
+                        <img class="icon" src="./images/logout.png" /> Log Out
+                    </button></li>
+                    <li><button class="tb"
+                                onclick="window.location.href='./aboutUs2.jsp'">
+                        <img class="icon" src="./images/aboutUs.png" /> About Us
+                    </button></li>
+                </ul>
+                <div>
+                    <img class="logo" alt="Task Mate" src="./images/logo.png" />
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div id="taskContainer"></div>
+            <button id="newTask" class="addTaskDiv" onclick="toggleTaskForm()">+
+                Add a Task</button>
+            <div id="taskForm" class="main_div_taskForm">
+                <div class="div2">Title</div>
+                <input class="input_1" type="text" id="taskTitle" />
+                <div class="div1">Description</div>
+                <input type="text" id="taskDescription" class="input_2"> <br>
+                <button onclick="addTask()" class="btn2">+ Add The Task</button>
+                <button onclick="window.location.href='./screenMain.jsp'"
+                        class="btn2">Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var taskForm = document.getElementById('taskForm');
+        taskForm.style.display = 'none';
+    });
+    function toggleState() {
+        let button = document.getElementById('toggleButton');
+        button.classList.toggle('on');
+        button.classList.toggle('off');
+        let newTaskButton = document.getElementById("newTask");
+
+        if (button.classList.contains('on')) {
+            document.getElementById("mrc").style = "width: 350px;";
+            document.getElementById("menu").style = "display:block;";
+            newTaskButton.style = "width: 926px;"; // Set the width to auto
+        } else if (button.classList.contains('off')) {
+            document.getElementById("mrc").style = "width:76px;";
+            document.getElementById("menu").style = "display:none;";
+            newTaskButton.style = "width: 1200px;"; // Set the width to auto
+        }
+    }
+
+    function addTaskDiv() {
+        let taskForm = document.getElementById('taskForm');
+        taskForm.style.display = 'block';
+    }
+
+    function toggleTaskForm() {
+        let taskForm = document.getElementById('taskForm');
+        // Toggle the display property
+        if (taskForm.style.display === 'none'
+        || taskForm.style.display === '') {
+            taskForm.style.display = 'block';
+        } else {
+            taskForm.style.display = 'none';
+        }
+    }
+
+    function addTask() {
+        // Get values from input fields
+        let title = document.getElementById('taskTitle').value;
+        let description = document.getElementById('taskDescription').value;
+
+        // Create new div element for the task
+        let newTaskDiv = document.createElement('div');
+        newTaskDiv.className = 'main_div_taskForm';
+
+        // Create title div and input element
+        let titleDiv = document.createElement('div');
+        titleDiv.className = 'div2';
+        titleDiv.textContent = 'Title';
+        newTaskDiv.appendChild(titleDiv);
+
+        let titleInput = document.createElement('input');
+        titleInput.type = 'text';
+        titleInput.className = 'input_1';
+        titleInput.value = title;
+        newTaskDiv.appendChild(titleInput);
+
+        // Create description div and input element
+        let descDiv = document.createElement('div');
+        descDiv.className = 'div1';
+        descDiv.textContent = 'Description';
+        newTaskDiv.appendChild(descDiv);
+
+        let descInput = document.createElement('input');
+        descInput.type = 'text';
+        descInput.className = 'input_2';
+        descInput.value = description;
+        newTaskDiv.appendChild(descInput);
+
+        // Append the new task div to the task container
+        document.body.appendChild(newTaskDiv);
+    }
+    function deleteTaskFromList() {
+        let selectedTask = getSelectedTask();
+        if (selectedTask) {
+            // Delete the selected task
+            selectedTask.remove();
+        }
+    }
+
+    function editTaskFromList() {
+        let selectedTask = getSelectedTask();
+        if (selectedTask) {
+            // Edit the selected task (you can implement your own logic here)
+            // For example, you can enable editing of the task title and description fields
+            let titleInput = selectedTask.querySelector('.input_1');
+            let descInput = selectedTask.querySelector('.input_2');
+            titleInput.removeAttribute('readonly');
+            descInput.removeAttribute('readonly');
+        }
+    }
+
+    function getSelectedTask() {
+        // This function returns the selected task based on your criteria.
+        // You might need to implement your own logic here based on your requirements.
+        // For now, let's assume the selected task is the first task in the document.
+        return document.querySelector('.main_div_taskForm');
+    }
+</script>
+</body>
+</html>
